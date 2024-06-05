@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SolarSystem</title>
+</head>
+<body>
+    <div class="solar_system">
+        <div class="sun"></div>
+        <div class="mercury_orbit">
+            <div class="mercury"></div>
+        </div>
+        <div class="venus_orbit">
+            <div class="venus"></div>
+        </div>
+        <div class="earth_orbit">
+            <div class="earth">
+                <div class="moon_orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mars_orbit">
+            <div class="mars"></div>
+        </div>
+        <div class="jupiter_orbit">
+            <div class="jupiter"></div>
+        </div>
+        <div class="saturn_orbit">
+            <div class="saturn"></div>
+        </div>
+        <div class="uranus_orbit">
+            <div class="uranus"></div>
+        </div>
+        <div class="neptune_orbit">
+            <div class="neptune"></div>
+        </div>
+    
+    </div>
+
+    <style>
+
+        /* ---------- Animation ---------- */
+        @keyframes orbite_effect {
+            100%  {
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes pulse{
+            0%{
+                box-shadow:orange 0 0 0 0;
+            }
+            75%{
+                box-shadow:black 0 0 0 10px;
+            }
+        }
+        
+        /* ---------- Class_style ---------- */
+        body {
+            background-color: black;
+            margin: 0px;
+            overflow: hidden;
+        }
+        
+        .solar_system {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+        
+        .sun {
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: yellow;
+            animation: pulse 2s infinite linear; 
+            
+        }
+        
+        .earth_orbit {
+            position: absolute;
+            width: 300px; /* Taille de l'orbite */
+            height: 300px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -150px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -150px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 4s infinite linear;
+        }
+        
+        .earth {
+            position: absolute;
+            top: 0; 
+            left: 50%;
+            transform: translateX(-50%); 
+            height: 13px;
+            width: 13px;
+            border-radius: 50%;
+            background-color: green;
+            
+        }
+
+        .moon_orbit {
+            position: absolute;
+            width: 30px; /* Taille de l'orbite */
+            height: 30px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -15px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -15px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 4s infinite linear; 
+        }
+
+        .moon {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: whitesmoke;
+        }
+
+        .mercury_orbit {
+            position: absolute;
+            width: 160px; /* Taille de l'orbite */
+            height: 160px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -80px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -80px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 2s infinite linear;
+            
+        }
+        
+        .mercury {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 5px;
+            width: 5px;
+            border-radius: 50%;
+            background-color: brown;
+            
+        }
+
+        .venus_orbit {
+            position: absolute;
+            width: 210px; /* Taille de l'orbite */
+            height: 210px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -105px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -105px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 5.1s infinite linear; 
+        }
+        
+        .venus {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 12px;
+            width: 12px;
+            border-radius: 50%;
+            background-color: cyan;
+        }
+
+        .mars_orbit {
+            position: absolute;
+            width: 350px; /* Taille de l'orbite */
+            height: 350px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -175px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -175px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 3.6s infinite linear; 
+        }
+        
+        .mars {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 7px;
+            width: 7px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        .jupiter_orbit {
+            position: absolute;
+            width: 450px; /* Taille de l'orbite */
+            height: 450px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -225px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -225px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 4.6s infinite linear; 
+        }
+        
+        .jupiter {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            background-color: orange;
+        }
+
+        .saturn_orbit {
+            position: absolute;
+            width: 600px; /* Taille de l'orbite */
+            height: 600px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -300px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -300px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 7.7s infinite linear; 
+        }
+        
+        .saturn {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: beige;
+            border: solid black 4px;
+            box-shadow: 0 0 0 1px beige; /* Cela crée un anneau autour de Saturne */
+        }
+
+        .neptune_orbit {
+            position: absolute;
+            width: 800px; /* Taille de l'orbite */
+            height: 800px; /* Taille de l'orbite */
+            top: 50%;
+            left: 50%;
+            margin-top: -400px; /* Ajustez selon la moitié de la taille de l'orbite */
+            margin-left: -400px; /* Ajustez selon la moitié de la taille de l'orbite */
+            transform-origin: 50% 50%;
+            animation: orbite_effect 4.7s infinite linear; 
+        }
+        
+        .neptune {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            background-color: darkblue;
+        }
+
+</style>
+</body>
+</html>
